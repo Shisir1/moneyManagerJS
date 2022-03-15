@@ -122,7 +122,7 @@ console.log(
 
 // console.log(accounts);
 
-const [{movements}] = accounts;
+const [,{movements}] = accounts;
 // console.log(movements);
 
 //forEach
@@ -179,6 +179,27 @@ const displayBalance = (movements) =>{
 createUsername(accounts);
 displayMovements(movements);
 displayBalance(movements);
+
+//filter method : same as map method but filter method only returns truthy values when provided compare operation 
+console.log(movements.filter((movements) => movements));
+
+
+
+
+
+const depositsSum = movements
+.filter((mov) => mov > 0)
+.reduce((acc,mov) => acc + mov,0);
+
+//total deposits
+labelSumIn.textContent = `$${depositsSum}`;
+
+const withdrawalSum = movements
+.filter((mov) => mov < 0)
+.reduce((acc,mov) => acc + mov,0);
+
+//total withdrawals
+labelSumOut.textContent = `$${withdrawalSum}`;
 
 
 
