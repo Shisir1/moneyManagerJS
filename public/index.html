@@ -8,8 +8,9 @@
       href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script src="app.js" defer></script>
+    <link type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="../src/style.css" />
+  
     <title>Money Manager</title>
   </head>
 
@@ -117,5 +118,11 @@
       </p>
     </main>
     </main>
+
+    <script src="../src/selectElements.js" defer></script>
+    <script src="../src/accounts.js" defer></script> <!-- This should be before app.js beause it will run before-->
+    <script src="../src/app.js" defer></script>
+    <script src="../src/displayinfo.js" defer></script>
+
   </body>
 </html>
